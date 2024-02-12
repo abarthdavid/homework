@@ -21,7 +21,7 @@ exports.config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        'c:/Repo/bdd/src/features/**/*.feature'
+        'c:/Repo/homework/src/features/**/*.feature'
     ],
     // Patterns to exclude.
     exclude: [

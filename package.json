@@ -370,7 +370,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abarthdavid/bdd.git"
+    "url": "git+https://github.com/abarthdavid/homework.git"
   },
   "keywords": [
     "BDD",
@@ -379,8 +379,8 @@
   "author": "David Biro",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/abarthdavid/bdd/issues"
+    "url": "https://github.com/abarthdavid/homework/issues"
   },
-  "homepage": "https://github.com/abarthdavid/bdd#readme",
+  "homepage": "https://github.com/abarthdavid/homework#readme",
   "description": ""
 }
