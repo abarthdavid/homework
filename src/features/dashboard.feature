@@ -1,4 +1,4 @@
-Feature: Dashboard
+Feature: EPAM page tests - SQE JS training
 
   Scenario: 1. Check the title is correct
     Given I open the main page
@@ -57,10 +57,30 @@ Feature: Dashboard
     And I click on the Find button
     And Search result list with searchterm "search" should be loaded
 
-  Scenario: 7. Chack form's fields validation
+  Scenario: 7. Check form's fields validation
     Given I open the contact page
 
+    When I scroll to Submit button on the page
+    And I click on the Submit button
+    Then "FirstName textbox" should be required
+    And "LastName textbox" should be required
+    And "Email textbox" should be required
+    And "Phone textbox" should be required
+
+ Scenario: 8. Check the the Company logo on the header lead to the main page
+    Given I open the about page
+
+    When I click on the Logo in the Header
+    Then EPAM main page should be loaded
   
+  Scenario: 9. Check that allows to download report
+    Given I open the about page
+
+    When I scroll to Download button on the page
+    And I click on the Download button
+
+
+
 
 
 

@@ -12,6 +12,11 @@ Given('I open the contact page', async () => {
     await browser.setWindowSize(1440, 1080)
   });
 
+  Given('I open the about page', async () => {
+    await browser.url('https://www.epam.com/about')
+    await browser.setWindowSize(1440, 1080)
+  });
+
 When('I click on the theme toogle', async () => {
   await ($('.desktop-logo + .theme-switcher-ui .theme-switcher')).click();
 });
@@ -51,4 +56,24 @@ When('I set the {string} search term in the text box', async function (searchter
 
 When('I click on the Find button', async () => {
   await ($('.custom-search-button')).click();
+});
+
+When('I click on the Submit button', async () => {
+  await ($('.button-ui[type=submit]')).click();
+});
+
+When('I scroll to Submit button on the page', async () => {
+  await ($('.button-ui[type=submit]')).scrollIntoView({ block: 'center' });
+});
+
+When('I click on the Logo in the Header', async () => {
+  await ($('.desktop-logo')).click();
+});
+
+When('I scroll to Download button on the page', async () => {
+  await ($('a[href*="https://www.epam.com/content/dam/epam/free_library/EPAM_Corporate_Overview_Q3_october.pdf"]')).scrollIntoView({ block: 'center' });
+});
+
+When('I click on the Download button', async () => {
+  await ($('a[href*="https://www.epam.com/content/dam/epam/free_library/EPAM_Corporate_Overview_Q3_october.pdf"]')).click();
 });

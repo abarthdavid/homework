@@ -57,3 +57,32 @@ Then('Search modal should be expanded', async () => {
 Then('Search result list with searchterm {string} should be loaded', async function (searchterm) {
   await expect(browser).toHaveUrl(`https://www.epam.com/search?q=${searchterm}`);
 });
+
+Then('{string} should be required', async function (element) {
+  var elem;
+  switch(element){
+    case 'FirstName textbox': 
+      elem = '#_content_epam_en_about_who-we-are_contact_jcr_content_content-container_section_section-par_form_constructor_user_first_name'
+      break;
+      case 'LastName textbox': 
+      elem = '#_content_epam_en_about_who-we-are_contact_jcr_content_content-container_section_section-par_form_constructor_user_last_name'
+      break;
+      case 'Email textbox': 
+      elem = '#_content_epam_en_about_who-we-are_contact_jcr_content_content-container_section_section-par_form_constructor_user_email'
+      break;
+      case 'Phone textbox': 
+      elem = '#_content_epam_en_about_who-we-are_contact_jcr_content_content-container_section_section-par_form_constructor_user_phone'
+      break;
+  }
+
+  await expect($(`${elem}`)).toHaveAttribute('aria-required', 'true')
+
+});
+
+Then('EPAM main page should be loaded', async () => {
+  await expect(browser).toHaveUrl('https://www.epam.com/');
+});
+
+
+
+
