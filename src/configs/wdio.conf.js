@@ -1,5 +1,6 @@
 
 const { DOWNLOAD_FOLDER_PATH } = require('./../constants/pathconst');
+const multiremote = require('webdriverio');
 
 exports.config = {
     //
@@ -55,7 +56,6 @@ exports.config = {
     capabilities: [{
         browserName: 'chrome',
         'goog:chromeOptions': {
-            args: ['headless', 'disable-gpu'],
             prefs: {
                 'download.default_directory': DOWNLOAD_FOLDER_PATH
             }

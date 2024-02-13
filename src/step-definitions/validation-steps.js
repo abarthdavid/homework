@@ -87,7 +87,6 @@ Then('EPAM main page should be loaded', async () => {
 });
 
 Then('file extension should be correct', async () => {
-  const names = ['EPAM_Corporate_Overview_Q3_october']
   const extensions = ['.pdf']
   const files = fs.readdirSync(DOWNLOAD_FOLDER_PATH)
   
