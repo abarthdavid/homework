@@ -78,8 +78,7 @@ Feature: EPAM page tests - SQE JS training
 
     When I scroll to Download button on the page
     And I click on the Download button
-
-
+    Then file extension should be correct
 
 
 

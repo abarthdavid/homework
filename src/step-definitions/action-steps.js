@@ -4,17 +4,17 @@ const { When } = require('@wdio/cucumber-framework');
 
 Given('I open the main page', async () => {
     await browser.url('https://epam.com')
-    await browser.setWindowSize(1440, 1080)
+    await browser.maximizeWindow()
   });
 
 Given('I open the contact page', async () => {
     await browser.url('https://www.epam.com/about/who-we-are/contact')
-    await browser.setWindowSize(1440, 1080)
+    await browser.maximizeWindow()
   });
 
   Given('I open the about page', async () => {
     await browser.url('https://www.epam.com/about')
-    await browser.setWindowSize(1440, 1080)
+    await browser.maximizeWindow()
   });
 
 When('I click on the theme toogle', async () => {
@@ -75,5 +75,7 @@ When('I scroll to Download button on the page', async () => {
 });
 
 When('I click on the Download button', async () => {
+
   await ($('a[href*="https://www.epam.com/content/dam/epam/free_library/EPAM_Corporate_Overview_Q3_october.pdf"]')).click();
+  await browser.pause(5000);
 });

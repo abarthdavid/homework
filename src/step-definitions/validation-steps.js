@@ -1,6 +1,9 @@
 const { Then } = require('@wdio/cucumber-framework');
 const compareText = require('./utils/compare-text');
-
+const path = require('path');
+const { DOWNLOAD_FOLDER_PATH } = require('./../constants/pathconst')
+const fs = require("fs");
+const { deleteDirectory } = require('./utils/fileutils');
 
 Then('Page title should {string} {string}', async function (shouldBeParam, titleText) {
   const pageTitle = await browser.getTitle();
@@ -83,6 +86,19 @@ Then('EPAM main page should be loaded', async () => {
   await expect(browser).toHaveUrl('https://www.epam.com/');
 });
 
+Then('file extension should be correct', async () => {
+  const names = ['EPAM_Corporate_Overview_Q3_october']
+  const extensions = ['.pdf']
+  const files = fs.readdirSync(DOWNLOAD_FOLDER_PATH)
+  
+  files.forEach( file => {
+    expect(extensions).toContain(path.extname(file))
+  })
+  
+  deleteDirectory(DOWNLOAD_FOLDER_PATH);
+  
+});
 
 
 
+ 

@@ -1,3 +1,6 @@
+
+const { DOWNLOAD_FOLDER_PATH } = require('./../constants/pathconst');
+
 exports.config = {
     //
     // ====================
@@ -50,7 +53,13 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'chrome'
+        browserName: 'chrome',
+        'goog:chromeOptions': {
+            args: ['headless', 'disable-gpu'],
+            prefs: {
+                'download.default_directory': DOWNLOAD_FOLDER_PATH
+            }
+        }
     }],
 
     //

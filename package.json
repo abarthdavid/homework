@@ -1,5 +1,5 @@
 {
-  "name": "bdd",
+  "name": "homework",
   "devDependencies": {
     "@wdio/cli": "^8.31.0",
     "@wdio/cucumber-framework": "^8.31.0",
