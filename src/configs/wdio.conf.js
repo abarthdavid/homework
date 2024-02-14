@@ -55,9 +55,23 @@ exports.config = {
     //
     capabilities: [{
         browserName: 'chrome',
+        maxInstances: 1,
         'goog:chromeOptions': {
             prefs: {
                 'download.default_directory': DOWNLOAD_FOLDER_PATH
+            }
+        }
+    },
+    {
+        browserName: 'firefox',
+        maxInstances: 1,
+        "moz:debuggerAddress": true,
+        "moz:firefoxOptions": {
+            prefs: {
+                "browser.download.dir": DOWNLOAD_FOLDER_PATH,
+                "browser.download.folderList": 2,
+                "browser.download.manager.showWhenStarting": false,
+                "browser.helperApps.neverAsk.saveToDisk": "*/*"
             }
         }
     }],
