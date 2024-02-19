@@ -56,6 +56,7 @@ exports.config = {
     capabilities: [{
         browserName: 'chrome',
         maxInstances: 1,
+        browserVersion: "120",
         'goog:chromeOptions': {
             prefs: {
                 'download.default_directory': DOWNLOAD_FOLDER_PATH

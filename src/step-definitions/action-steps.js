@@ -71,11 +71,11 @@ When('I click on the Logo in the Header', async () => {
 });
 
 When('I scroll to Download button on the page', async () => {
-  await ($('a[href*="https://www.epam.com/content/dam/epam/free_library/EPAM_Corporate_Overview_Q3_october.pdf"]')).scrollIntoView({ block: 'center' });
+  await ($('a[href*="https://www.epam.com/content/dam/epam/free_library/EPAM_Corporate_Overview_Q4_EOY.pdf"]')).scrollIntoView({ block: 'center' });
 });
 
 When('I click on the Download button', async () => {
 
-  await ($('a[href*="https://www.epam.com/content/dam/epam/free_library/EPAM_Corporate_Overview_Q3_october.pdf"]')).click();
+  await ($('a[href*="https://www.epam.com/content/dam/epam/free_library/EPAM_Corporate_Overview_Q4_EOY.pdf"]')).click();
   await browser.pause(5000);
 });
